@@ -1,0 +1,14 @@
+def fizzbuzz_5(n):
+    for i in range(1, n + 1):
+        match (i % 3, i % 5):
+            case (0, 0):
+                yield "FizzBuzz"
+            case (0, _):
+                yield "Fizz"
+            case (_, 0):
+                yield "Buzz"
+            case _:
+                yield i
+
+for j in fizzbuzz_5(15):
+    print(j)
